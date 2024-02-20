@@ -1,0 +1,52 @@
+
+const findmaxProfit = (input) => {
+    let theater = 5;
+    let pub = 4;
+    let comm = 10;
+    let theaterCost = 1500;
+    let pubCost = 1000;
+    let comCost = 3000;
+    let maxprofit = 0;
+    let profit = 0;
+
+    if (theater < input) {
+        let bal = input - theater;
+        profit = bal * theaterCost;
+        if (bal > theater) {
+            let val = findmaxProfit(bal);
+            profit += val
+            console.log(profit);
+        }
+        if (maxprofit < profit) {
+            maxprofit = profit
+        }
+
+    }
+
+    // if (pub < input) {
+    //     let bal = input - pub;
+    //      profit = bal * pubCost
+    //     if (bal > pub) {
+    //         let val = findmaxProfit(bal);
+    //         profit += val
+    //     }
+    //     if (maxprofit < profit) {
+    //         maxprofit = profit
+    //     }
+    // } if (comm < input) {
+    //     let bal = input - comm;
+    //      profit = bal * comCost
+    //     if (bal > comm) {
+    //         let val = findmaxProfit(bal);
+    //         profit += val
+    //     }
+    //     if (maxprofit < profit) {
+    //         maxprofit = profit
+    //     }
+    // }
+    return maxprofit
+}
+let input = 15;
+// console.log('$ ' + findmaxProfit(input));
+
+
