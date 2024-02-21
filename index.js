@@ -20,7 +20,7 @@ const findmaxProfit = (plot, cost, input) => {
 let button=document.getElementById('btnConClick');
 button.addEventListener('click',()=>{
     let max = 0;
-    document.getElementById('profitCon').innerHTML=''
+    document.getElementById('profitCon').innerText=''
     let input=document.getElementById('inputCon').value;
     arr.forEach((e) => {
         let data = findmaxProfit(e.plot, e.cost, input);
@@ -28,5 +28,6 @@ button.addEventListener('click',()=>{
             max = data;
         } 
     })
-    document.getElementById('profitCon').innerHTML = `$ ${max}`
+    console.log(max);
+    document.getElementById('profitCon').innerText = `$ ${max}`
 })
